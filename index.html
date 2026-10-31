@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WhistleFlow, dictation that stays on your Mac</title>
+<meta name="description" content="Hold Fn, talk, and WhistleFlow types it into any app. Fully offline on Apple silicon, free for the first 100 users.">
+<link rel="icon" type="image/png" href="assets/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<p class="notice"><a href="WhistleFlow.dmg" download>Free for the first 100 users.<span class="notice__more">&nbsp;Download for Mac</span></a></p>
+
+<header class="mast">
+  <nav class="container mast__bar" aria-label="Main">
+    <a class="mast__link" href="#moments-h">how it works</a>
+    <a class="wordmark" href="#main" aria-label="WhistleFlow, home">whistleflow</a>
+    <a class="mast__link mast__link--end" href="WhistleFlow.dmg" download>download</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container hero__inner">
+      <h1><span class="verb">speak.</span><br>your voice stays on this mac.</h1>
+      <p class="lead">Hold Fn, talk, and WhistleFlow types it into any app, offline.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="WhistleFlow.dmg" download>download for mac</a>
+      </div>
+      <p class="hero__terms">16&nbsp;MB. Needs macOS&nbsp;26 on Apple silicon.</p>
+
+      <figure class="sig" data-slot="demo" data-kind="product" data-alt="A screen recording: holding Fn, speaking, and the sentence appearing in Notes">
+        <p class="sig__text">Hey team, the quarterly report is ready. Please review it before Friday’s meeting and send me your comments.<span class="caret" aria-hidden="true"></span></p>
+        <figcaption class="sig__status">
+          <span class="readout">pasted into notes</span>
+          <span class="readout">language: en, detected</span>
+          <span class="readout readout--live">network: none</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="moments" aria-labelledby="moments-h">
+    <div class="container">
+      <div class="head-split">
+        <h2 id="moments-h">one key, three moments.</h2>
+        <p class="lead">What you see between pressing Fn and the text arriving.</p>
+      </div>
+      <div class="switch" data-switch>
+        <div class="tabs" role="tablist" aria-label="Moments">
+          <button type="button" role="tab" id="t-hold" aria-controls="p-hold" aria-selected="true">hold fn</button>
+          <button type="button" role="tab" id="t-go" aria-controls="p-go" aria-selected="false" tabindex="-1">let go</button>
+          <button type="button" role="tab" id="t-done" aria-controls="p-done" aria-selected="false" tabindex="-1">done</button>
+        </div>
+        <div class="panel" role="tabpanel" id="p-hold" aria-labelledby="t-hold">
+          <div class="stage" data-slot="moment-hold" data-kind="product" data-alt="A mail draft with the recording pill at the bottom of the screen while holding Fn">
+            <div class="doc" aria-hidden="true">
+              <p class="doc__meta">to: sam@example.com</p>
+              <p>Hi Sam,</p>
+              <p>Got your note about the review.</p>
+              <p><span class="caret"></span></p>
+            </div>
+            <div class="pill" aria-hidden="true">
+              <i style="--h:.2"></i><i style="--h:.45"></i><i style="--h:.8"></i><i style="--h:.55"></i><i style="--h:1"></i><i style="--h:.7"></i><i style="--h:.35"></i><i style="--h:.6"></i><i style="--h:.25"></i>
+            </div>
+          </div>
+          <p class="caption">Your cursor waits in the draft. The pill shows your voice level while Fn is down.</p>
+        </div>
+        <div class="panel" role="tabpanel" id="p-go" aria-labelledby="t-go">
+          <div class="stage" data-slot="moment-go" data-kind="product" data-alt="The same draft while the pill shows a spinner during transcription">
+            <div class="doc" aria-hidden="true">
+              <p class="doc__meta">to: sam@example.com</p>
+              <p>Hi Sam,</p>
+              <p>Got your note about the review.</p>
+              <p><span class="caret"></span></p>
+            </div>
+            <div class="pill" aria-hidden="true"><b class="spinner"></b></div>
+          </div>
+          <p class="caption">Let go and the model transcribes on your Mac. The pill turns to a spinner.</p>
+        </div>
+        <div class="panel" role="tabpanel" id="p-done" aria-labelledby="t-done">
+          <div class="stage" data-slot="moment-done" data-kind="product" data-alt="The dictated sentence pasted into the draft">
+            <div class="doc" aria-hidden="true">
+              <p class="doc__meta">to: sam@example.com</p>
+              <p>Hi Sam,</p>
+              <p>Got your note about the review.</p>
+              <p><mark>Thanks, Friday works. I’ll bring the draft.</mark><span class="caret"></span></p>
+            </div>
+          </div>
+          <p class="caption">The sentence lands at the cursor, and your clipboard is put back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fast" aria-labelledby="fast-h">
+    <div class="container">
+      <div class="head-split">
+        <h2 id="fast-h">lighter and quicker than whisper.</h2>
+        <p class="lead">A lightweight AI model, measured against OpenAI Whisper base.</p>
+      </div>
+      <ul class="stats">
+        <li><b>11.1<span class="unit">ms</span></b><span class="what">to the first word</span><span class="vs">Whisper base: 73.2&nbsp;ms</span></li>
+        <li><b>1,319<span class="unit">tokens/s</span></b><span class="what">decoded per second</span><span class="vs">Whisper base: 266</span></li>
+        <li><b>16.9<span class="unit">MB</span></b><span class="what">on disk</span><span class="vs">Whisper base: 145.3&nbsp;MB</span></li>
+      </ul>
+      <p class="caption fast__source">Published benchmark of the model inside WhistleFlow: 10&nbsp;s of audio on an Apple M4 Pro, each engine at its defaults.</p>
+    </div>
+  </section>
+
+  <section class="path" aria-labelledby="path-h">
+    <div class="container">
+      <h2 id="path-h">your voice takes one hop.</h2>
+      <figure class="diagram blueprint" aria-label="Diagram of the path audio takes in cloud dictation and in WhistleFlow">
+        <div class="route">
+          <p class="route__name">cloud dictation</p>
+          <div class="route__steps" role="list">
+            <span class="node" role="listitem">mic</span><span class="link" aria-hidden="true"></span>
+            <span class="node" role="listitem">upload audio</span><span class="link" aria-hidden="true"></span>
+            <span class="node" role="listitem">a server you don’t run</span><span class="link" aria-hidden="true"></span>
+            <span class="node" role="listitem">text sent back</span>
+          </div>
+        </div>
+        <div class="route route--ours">
+          <p class="route__name">whistleflow</p>
+          <div class="route__steps" role="list">
+            <span class="node" role="listitem">mic</span>
+            <span class="link link--long" role="listitem">the model, on this mac</span>
+            <span class="node" role="listitem">text in your app</span>
+          </div>
+        </div>
+        <figcaption>Each box is a place your audio goes. WhistleFlow’s path never opens a network connection.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="spec" aria-labelledby="spec-h">
+    <div class="container spec__grid">
+      <h2 id="spec-h">everything ships inside the app.</h2>
+      <table>
+        <tbody>
+          <tr><th scope="row">the model</th><td>16.9&nbsp;MB, built into the app</td></tr>
+          <tr><th scope="row">runs on</th><td>your Mac’s CPU, no GPU needed</td></tr>
+          <tr><th scope="row">languages</th><td>English, German, French, Spanish, Italian, Dutch, Polish</td></tr>
+          <tr><th scope="row">price</th><td>Free for the first 100 users</td></tr>
+          <tr><th scope="row">needs</th><td>macOS 26, Apple silicon</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="close-h">
+    <div class="container close__inner">
+      <div class="close__head">
+        <img class="close__icon" src="assets/icon-512.png" width="512" height="512" alt="The WhistleFlow app icon, a brass waveform on a dark square" loading="lazy">
+        <h2 id="close-h">hold fn in any app.</h2>
+      </div>
+      <div class="close__act">
+        <a class="btn btn--primary" href="WhistleFlow.dmg" download>download for mac</a>
+        <p class="close__note">First launch walks you through the microphone, Accessibility and the Fn key.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <p class="foot__mark">whistleflow</p>
+    <ul class="foot__links">
+      <li><a href="#moments-h">how it works</a></li>
+      <li><a href="#fast-h">speed</a></li>
+      <li><a href="WhistleFlow.dmg" download>download</a></li>
+    </ul>
+    <p class="foot__author">Made by Ronak Munjapara.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-switch]').forEach((root) => {
+  const tabs = [...root.querySelectorAll('[role="tab"]')];
+  const select = (tab) => tabs.forEach((t) => {
+    const on = t === tab;
+    t.setAttribute('aria-selected', on);
+    t.tabIndex = on ? 0 : -1;
+    document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+  });
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', (e) => {
+      const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+      if (!d) return;
+      const next = tabs[(i + d + tabs.length) % tabs.length];
+      select(next); next.focus();
+    });
+  });
+  select(tabs[0]);
+});
+</script>
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>
